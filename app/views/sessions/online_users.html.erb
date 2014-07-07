@@ -1,0 +1,5 @@
+<% @users.each do |user| %>
+  <%= user.email%>
+  <br style="float:right">
+  <%= link_to "logout", sessions_destroy_path %>
+<%end%>

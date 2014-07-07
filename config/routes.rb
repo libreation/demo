@@ -1,11 +1,15 @@
 Assignment::Application.routes.draw do
+  get "sessions/new"
+  post "sessions/create"
+  get "sessions/destroy"
+  get "sessions/online_users"
   resources :users, only: [:new, :create, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'sessions#new'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
